@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Music template</title>
+		<link rel="stylesheet" href="index.css" />
+		<!-- <script src="index.js"></script> -->
+	</head>
+	<body>
+		<div class="container">
+			<ul class="nav">
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Artist</a></li>
+				<li><a href="#">Musics</a></li>
+				<li><a href="#">Home</a></li>
+
+
+                <div class="buttons">
+                    <a href="/intro.html" target="_blank">
+                        <button class="btn">MyIntro</button></a
+                    >
+                    <a href="musics" target="_blank">
+                        <button class="btn">Music</button></a
+                    >
+                    
+                    <a href="/blog.html" target="_blank">
+                        <button class="btn">MyBlog</button></a
+                    >
+                    <a href="/services.html" target="_blank">
+                        <button class="btn">MyServices</button></a
+                    >
+                    <a href="/contact.html"
+                        ><button class="btn">ContactMe</button></a
+                    >
+                </div>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="left-col">
+				<h1>
+					MY <br />
+					SOUNDS
+				</h1>
+			</div>
+			<div class="right-col">
+				<p>Click Here To Listen</p>
+
+				<img class="img" src="media/play.png" id="icon" alt="" />
+			</div>
+		</div>
+		<audio id="mysound">
+            <source src="media/song/AKHIL___WAVES___BOB___Latest_Punjabi_Songs_2022___New_Punjabi_Songs_2022(256k).mp3" type="audio/mp3"/>
+			<source src="media/song/Chitthi_Video_Song___Feat._Jubin_Nautiyal___Akanksha_Puri___Kumaar___New_Song_2019___T-Series(256k).mp3" type="audio/mp3" />
+			
+		</audio>
+		<script>
+          //  const mySound = new Audio("music.mp3") ;
+
+
+			var mysound = document.getElementById("mysound");
+			var icon = document.getElementById("icon");
+
+			icon.onclick = function () {
+				if (mysound.paused) {
+					// If paused then play the
+					// music and change the image
+					mysound.play();
+					icon.src = "media/Pause.png";
+				} else {
+					// If playing then pause the
+					// music and change the image
+					mysound.pause();
+					icon.src = "media/play.png";
+				}
+			};
+		</script>
+	</body>
+</html>
